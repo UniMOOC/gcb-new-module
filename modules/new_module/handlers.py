@@ -2,6 +2,6 @@
 from controllers.utils import BaseHandler
 
 
-class NewURLHandler(BaseHandler):
+class NewCourseHandler(BaseHandler):
     def get(self):
-        self.response.out.write('Some stuff')
+        self.response.out.write("/new-url works but /course doesn't")

@@ -16,11 +16,11 @@ def register_module():
         logging.info('Module new_module.py was just dissabled')
 
     global_urls = [
-        ('/new-global-url', handlers.NewURLHandler)  # Global URLs go on mycourse.appspot.com/url
     ]
     course_urls = [
-        ('/new-course-url', handlers.NewURLHandler)
-    ]    # Course URLs go on mycourse.appspot.com/course-name/url
+        ('/course', handlers.NewCourseHandler),
+        ('/new-url', handlers.NewCourseHandler)
+    ]
 
     global custom_module
     custom_module = custom_modules.Module(
